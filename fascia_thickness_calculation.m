@@ -44,8 +44,7 @@ for i = 1:95% for thigh
     % Find the thickness*******************************************
     K = bwdist(~bw);
     L1 = bwmorph(bw, 'skel', inf);
-    radiiValues = K.*L1;    
-    diameterValue = 2*(4/10) * radiiValues; % Spatial resolution = 0.4*0.4mm
+    diameterValue = 2*(7/10) * (K.*L1); % Spatial resolution = 0.7*0.7mm
 
     A = transpose(diameterValue);
     
